@@ -1,6 +1,10 @@
 name: Test Scipy
 on: [push]
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   test_scipy:
     runs-on: windows-latest
