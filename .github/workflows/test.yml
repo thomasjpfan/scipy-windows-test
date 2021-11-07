@@ -1,0 +1,9 @@
+name: Assign
+on: [push]
+
+jobs:
+  test_scipy:
+    runs-on: windows-latest
+    steps:
+      - run:
+          docker build .
