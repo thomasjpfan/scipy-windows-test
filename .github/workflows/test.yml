@@ -12,4 +12,4 @@ jobs:
       - name: Check Out Repo
         uses: actions/checkout@v2
       - run: docker build --build-arg PYTHON_VERSION=${{ matrix.python_version }} -t test_build .
-      - run: docker run --rm test_build python main.py
+      - run: docker run -ti test_build python main.py
