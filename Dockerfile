@@ -1,5 +1,4 @@
 ARG PYTHON_VERSION
-FROM winamd64/python:$PYTHON_VERSION
+FROM winamd64/python:$PYTHON_VERSION-windowsservercore-ltsc2022
 
-RUN pip install --upgrade --user pip
 RUN pip install scipy
