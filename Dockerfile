@@ -1,4 +1,5 @@
-FROM winamd64/python:3.10-windowsservercore
+ARG PYTHON_VERSION
+FROM winamd64/python:$PYTHON_VERSION-windowsservercore
 
 RUN pip install scipy
 COPY main.py main.py
