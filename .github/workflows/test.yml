@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v2
       - run: docker build --build-arg PYTHON_VERSION=${{ matrix.python_version }} -t test_build .
       - run: docker run --rm test_build python get_info.py
-      - run: docker run --rm test_build python main.py
+      - run: docker run --rm test_build python -c "from scipy.sparse import csr_matrix"
