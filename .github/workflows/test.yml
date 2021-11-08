@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: Check Out Repo
         uses: actions/checkout@v2
-      - run: docker build --build-arg -t test_build .
+      - run: docker build -t test_build .
       - run: docker run test_build python -c "import sys, scipy, numpy; print(scipy.__version__, numpy.__version__, sys.version_info)"
       - run: docker run test_build python -c "from scipy.sparse import csr_matrix"
